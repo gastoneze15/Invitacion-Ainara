@@ -199,11 +199,11 @@ body {
 
 .hero-text h1 {
     font-family: Baloo Tammudu\ 2, Baloo Tammudu\ 2 Fallback;
-    font-size: 30px;
+    /* font-size: 26px; */
     font-weight: 400;
     font-style: bold;
     margin-top: 50px;
-    font-size: clamp(22px, 7vw, 32px);
+    font-size: clamp(22px, 7vw, 28px);
   margin: 10px 0 10px;
 }
 
