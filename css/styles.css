@@ -156,7 +156,7 @@ body {
     aspect-ratio: 1900/ 3500;
     background:
         linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)),
-        url("../assets/fotos/invitacion.jpeg");
+        url("/assets/fotos/invitacion\ 1.jpeg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center top;
@@ -165,13 +165,16 @@ body {
 
 .hero-text {
     position: absolute;
-    top: 150px;
+    top: 220px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     text-align: center;
     color: #f0b6cf;
     margin-top: 0;
+        margin: 0;
+    padding: 0;
+    line-height: 1;
 }
 
 
@@ -181,7 +184,7 @@ body {
 .dresscode h2,
 .confirm h2 {
     font-family: Baloo Tammudu\ 2, Baloo Tammudu\ 2 Fallback;
-    font-weight: 400;
+
 }
 
 .hero-text h1 {
@@ -189,11 +192,12 @@ body {
     font-size: 30px;
     font-weight: 400;
     font-style: bold;
+    margin-top: 50px;
 }
 
 .hero-text p {
     font-family: Baloo Tammudu\ 2, Baloo Tammudu\ 2 Fallback;
-    font-size: 25px;
+    font-size: 27px !important;
     font-weight: 400;
     font-style: bold;
 }
@@ -201,7 +205,7 @@ body {
 .hero-text span {
     font-family: Baloo Tammudu\ 2, Baloo Tammudu\ 2 Fallback;
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 40;
     font-style: bold;
 }
 
