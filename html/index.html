@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer añito - Ainara</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="../assets/musica/cenicienta.mp3" type="audio/mpeg">
+    </audio>
+    <button class="music-btn" id="musicBtn">
+        ♫
+    </button>
+    <div class="particles"></div>
+
+    <section class="envelope-intro">
+        <div class="envelope-wrapper">
+            <img src="../assets/fotos/pink-top.png" class="envelope-top-img">
+            <img src="../assets/fotos/moño_corona_sobre-removebg-preview.png" class="envelope-bow" alt="Moño">
+            <div class="envelope-center">
+                <p>Desliza para abrir</p>
+                <span>⌄</span>
+            </div>
+            <img src="../assets/fotos/pink-bottom.png" class="envelope-bottom-img">
+        </div>
+    </section>
+
+    <section class="hero floral-bg">
+        <div class="invite-cover">
+            <div class="hero-text">
+                <h1>Mi primer añito</h1>
+                <h2 class="ainu">Ainara</h2>
+                <p>13 de septiembre de 2026</p>
+                <span>13:30</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="photo-message reveal">
+
+        <p>
+            Te invitamos a festejar el primer añito de Ainara
+        </p>
+
+        <div class="photo-frame">
+            <img src="../assets/fotos/ainara minnie.jpeg" alt="Foto de Ainara">
+        </div>
+
+    </section>
+
+    <section class="countdown-section reveal">
+        <div class="countdown">
+            <div><span id="days">00</span>
+                <p>Días</p>
+            </div>
+            <div><span id="hours">00</span>
+                <p>Horas</p>
+            </div>
+            <div><span id="minutes">00</span>
+                <p>Minutos</p>
+            </div>
+            <div><span id="seconds">00</span>
+                <p>Segundos</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="location reveal">
+        <h2>Diquint Eventos</h2>
+        <p>José Cubas 3474, Buenos Aires, Argentina</p>
+
+        <div class="map-box">
+            <iframe src="https://www.google.com/maps?q=José%20Cubas%203474,%20Buenos%20Aires,%20Argentina&output=embed"
+                loading="lazy">
+            </iframe>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=José+Cubas+3474,+Buenos+Aires,+Argentina"
+                target="_blank">
+                Abrir en google maps
+            </a>
+        </div>
+    </section>
+
+    <section class="dresscode reveal">
+        <h2>Dresscode</h2>
+        <p>
+            Elegante Sport
+        </p>
+    </section>
+
+        <section class="decor-section">
+            <img src="../assets/fotos/minnie_corona-removebg-preview.png" alt="Minnie" class="decor-img minnie">
+        </section>
+
+    <section class="confirm reveal">
+        <h2>¿Deseas confirmar tu asistencia <span id="guestName">Invitado</span>?</h2>
+        <p>Tu invitación es para <span id="guestAdults">1</span> adulto(s)</p>
+
+        <div class="confirm-options">
+
+            <a class="option active" href="https://wa.me/5491123456789" target="_blank">
+                Confirmar
+            </a>
+
+            <a class="option" href="https://wa.me/5491123456789" target="_blank">
+                Confirmar para menos invitados
+            </a>
+
+            <a class="option" href="https://wa.me/5491123456789" target="_blank">
+                No puedo asistir
+            </a>
+
+        </div>
+    </section>
+    </section>
+
+    </main>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+
+
+</html>
