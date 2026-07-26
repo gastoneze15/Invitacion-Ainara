@@ -144,28 +144,38 @@ body {
     background: #ffffff;
 }
 
-.floral-bg {
+/* .floral-bg {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     padding: 0px 0;
-}
+} */
 
-.invite-cover {
-    position: relative;
+/* .invite-cover {
     width: min(100%, 450px);
-    aspect-ratio: 450 / 650;
-    margin: 0 auto;
-    overflow: hidden;
+    aspect-ratio: 1900/ 3500;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08)),
+        url("/assets/fotos/invitacion\ 1.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: relative;
+} */
+.invite-cover {
+  position: relative;
+  width: min(100%, 450px);
+  aspect-ratio: 450 / 650;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .floral-bg {
-    background-image: url("/assets/fotos/invitacion\ 1.jpeg");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url("/assets/fotos/invitacion\ 1.jpeg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 .hero-text {
     position: absolute;
     top: 28%;
@@ -174,27 +184,9 @@ body {
     width: 88%;
     text-align: center;
     color: #f0b6cf;
+    text-align: center;
 }
 
-.hero-text h1 {
-    font-size: clamp(22px, 7vw, 32px);
-    margin: 0 0 10px;
-}
-
-.hero-text .ainu {
-    font-size: clamp(30px, 10vw, 44px);
-    margin: 0 0 14px;
-    font-family: 'Allura', cursive;
-}
-
-.hero-text p {
-    font-size: clamp(20px, 5.3vw, 24px);
-    margin: 0 0 10px;
-}
-
-.hero-text span {
-    font-size: clamp(18px, 5.5vw, 25px);
-}
 
 .hero-text h1,
 .hero-text h2,
@@ -203,6 +195,42 @@ body {
 .confirm h2 {
     font-family: Baloo Tammudu\ 2, Baloo Tammudu\ 2 Fallback;
 
+}
+
+.hero-text h1 {
+    font-family: Baloo Tammudu\ 2, Baloo Tammudu\ 2 Fallback;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: bold;
+    margin-top: 50px;
+    font-size: clamp(22px, 7vw, 32px);
+  margin: 10px 0 10px;
+}
+
+.hero-text p {
+    font-family: Baloo Tammudu\ 2, Baloo Tammudu\ 2 Fallback;
+    /* font-size: 27px !important; */
+    font-weight: 400;
+    font-style: bold;
+      font-size: clamp(20px, 5.3vw, 24px) !important;
+  margin: 0 0 10px;
+}
+
+.hero-text span {
+    font-family: Baloo Tammudu\ 2, Baloo Tammudu\ 2 Fallback;
+    font-size: 25px;
+    font-weight: 40;
+    font-style: bold;
+    font-size: clamp(18px, 5.5vw, 25px);
+}
+
+.hero-text .ainu {
+    font-family: 'Allura', cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+     font-size: clamp(30px, 10vw, 44px);
+  margin: 0 0 14px;
 }
 
 .photo-message {
@@ -462,7 +490,7 @@ body {
 @keyframes floatParticle {
     from {
         transform:
-            translateY(110vh);
+            translateY(110vh) ;
         opacity: 0;
     }
 
