@@ -77,11 +77,21 @@ for (let i = 0; i < 18; i++) {
 
 const params = new URLSearchParams(window.location.search);
 
+
 const guestName = params.get("nombre") || "Invitado";
 const guestAdults = params.get("adultos") || "1";
+const guestMinors = params.get("menores") || "0";
 
 document.getElementById("guestName").textContent = guestName;
-document.getElementById("guestAdults").textContent = guestAdults;
+
+let invitationText = `${guestAdults} adulto(s)`;
+
+if (guestMinors !== "0") {
+    invitationText += ` y ${guestMinors} menor(es)`;
+}
+
+document.getElementById("guestAdults").textContent = invitationText;
+
 document.addEventListener("DOMContentLoaded", () => {
     const bgMusic = document.getElementById("bgMusic");
     const musicBtn = document.getElementById("musicBtn");
