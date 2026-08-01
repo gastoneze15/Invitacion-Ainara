@@ -77,20 +77,23 @@ for (let i = 0; i < 18; i++) {
 
 const params = new URLSearchParams(window.location.search);
 
-
 const guestName = params.get("nombre") || "Invitado";
 const guestAdults = params.get("adultos") || "1";
 const guestMinors = params.get("menores") || "0";
 
-document.getElementById("guestName").textContent = guestName;
+const adultsLabel = guestAdults === "1" ? "adulto" : "adultos";
+const minorsLabel = guestMinors === "1" ? "menor" : "menores";
 
-let invitationText = `${guestAdults} adulto(s)`;
+let invitationText = `${guestAdults} ${adultsLabel}`;
 
 if (guestMinors !== "0") {
-    invitationText += ` y ${guestMinors} menor(es)`;
+    invitationText += ` y ${guestMinors} ${minorsLabel}`;
 }
 
+document.getElementById("guestName").textContent = guestName;
 document.getElementById("guestAdults").textContent = invitationText;
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const bgMusic = document.getElementById("bgMusic");
@@ -128,3 +131,68 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+const whatsappPhone = "5491158335480";
+
+const whatsappConfirmBtn = document.getElementById("confirmBtn");
+const whatsappLessBtn = document.getElementById("confirmLessBtn");
+const whatsappDeclineBtn = document.getElementById("declineBtn");
+
+const messageConfirm = `¡Hola Kim! 
+
+${guestName} confirma su asistencia al bautismo y primer añito de Ainara.
+
+La invitación es para ${invitationText}.
+
+¡Nos vemos el 13 de septiembre! `;
+
+const messageLess = `¡Hola Kim! 
+
+${guestName} confirma su asistencia al bautismo y primer añito de Ainara, pero asistirán menos personas de las indicadas.
+
+Cantidad final de asistentes: `;
+
+const messageDecline = `¡Hola Kim! 
+
+${guestName} no podrá asistir al bautismo y primer añito de Ainara.
+
+Les deseo que tengan un día hermoso y muchas felicidades. `;
+
+function whatsappUrl(message) {
+    return `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(message)}`;
+}
+
+whatsappConfirmBtn.href = whatsappUrl(messageConfirm);
+whatsappLessBtn.href = whatsappUrl(messageLess);
+whatsappDeclineBtn.href = whatsappUrl(messageDecline);
+
+whatsappConfirmBtn.target = "_blank";
+whatsappLessBtn.target = "_blank";
+whatsappDeclineBtn.target = "_blank";
+
+console.log("Enlace de WhatsApp configurado:", whatsappConfirmBtn.href);
+
+const eventReminder = document.getElementById("eventReminder");
+
+const eventDate = new Date("2026-09-13T13:30:00-03:00");
+const now = new Date();
+
+const millisecondsPerDay = 1000 * 60 * 60 * 24;
+const daysLeft = Math.ceil((eventDate - now) / millisecondsPerDay);
+
+if (eventReminder && daysLeft <= 5 && daysLeft > 1) {
+    eventReminder.textContent =
+        `💌 ¡Faltan solo ${daysLeft} días para festejar juntos!`;
+    eventReminder.style.display = "block";
+}
+
+if (eventReminder && daysLeft === 1) {
+    eventReminder.textContent =
+        "💌 ¡Mañana festejamos el bautismo y primer añito de Ainara!";
+    eventReminder.style.display = "block";
+}
+
+if (eventReminder && daysLeft === 0) {
+    eventReminder.textContent =
+        "🎀 ¡Hoy es el gran día! Los esperamos a las 13:30.";
+    eventReminder.style.display = "block";
+}

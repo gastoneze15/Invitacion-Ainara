@@ -580,3 +580,18 @@ body {
         padding: 18px 28px;
     }
 }
+
+.event-reminder {
+    display: none;
+    width: min(90%, 650px);
+    margin: 30px auto;
+    padding: 18px 24px;
+    text-align: center;
+    font-size: clamp(18px, 4vw, 26px);
+    font-family: 'Baloo Tammudu 2', sans-serif;
+    color: #7a4b5d;
+    background: #fce8f1;
+    border: 1px solid #efbfd3;
+    border-radius: 22px;
+    box-shadow: 0 8px 24px rgba(122, 75, 93, 0.14);
+}
