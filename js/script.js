@@ -160,39 +160,3 @@ Les deseo que tengan un día hermoso y muchas felicidades. `;
 function whatsappUrl(message) {
     return `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(message)}`;
 }
-
-whatsappConfirmBtn.href = whatsappUrl(messageConfirm);
-whatsappLessBtn.href = whatsappUrl(messageLess);
-whatsappDeclineBtn.href = whatsappUrl(messageDecline);
-
-whatsappConfirmBtn.target = "_blank";
-whatsappLessBtn.target = "_blank";
-whatsappDeclineBtn.target = "_blank";
-
-console.log("Enlace de WhatsApp configurado:", whatsappConfirmBtn.href);
-
-const eventReminder = document.getElementById("eventReminder");
-
-const eventDate = new Date("2026-09-13T13:30:00-03:00");
-const now = new Date();
-
-const millisecondsPerDay = 1000 * 60 * 60 * 24;
-const daysLeft = Math.ceil((eventDate - now) / millisecondsPerDay);
-
-if (eventReminder && daysLeft <= 5 && daysLeft > 1) {
-    eventReminder.textContent =
-        `💌 ¡Faltan solo ${daysLeft} días para festejar juntos!`;
-    eventReminder.style.display = "block";
-}
-
-if (eventReminder && daysLeft === 1) {
-    eventReminder.textContent =
-        "💌 ¡Mañana festejamos el bautismo y primer añito de Ainara!";
-    eventReminder.style.display = "block";
-}
-
-if (eventReminder && daysLeft === 0) {
-    eventReminder.textContent =
-        "🎀 ¡Hoy es el gran día! Los esperamos a las 13:30.";
-    eventReminder.style.display = "block";
-}
