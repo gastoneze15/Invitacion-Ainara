@@ -160,3 +160,22 @@ Les deseo que tengan un día hermoso y muchas felicidades. `;
 function whatsappUrl(message) {
     return `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(message)}`;
 }
+if (whatsappConfirmBtn) {
+    whatsappConfirmBtn.href = whatsappUrl(messageConfirm);
+    whatsappConfirmBtn.target = "_blank";
+}
+
+if (whatsappLessBtn) {
+    whatsappLessBtn.href = whatsappUrl(messageLess);
+    whatsappLessBtn.target = "_blank";
+}
+
+if (whatsappDeclineBtn) {
+    whatsappDeclineBtn.href = whatsappUrl(messageDecline);
+    whatsappDeclineBtn.target = "_blank";
+}
+
+console.log("Confirmar:", whatsappConfirmBtn?.href);
+console.log("Menos invitados:", whatsappLessBtn?.href);
+console.log("No asistir:", whatsappDeclineBtn?.href);
+
